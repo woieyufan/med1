@@ -1,0 +1,3 @@
+@echo off
+echo Starting Medical Licensing Exam Step 1 Lecture Notes Local Server...
+python -m mkdocs serve

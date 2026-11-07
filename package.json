@@ -1,0 +1,18 @@
+{
+  "name": "taiwan-medical-exam-step1-notes",
+  "version": "1.0.0",
+  "description": "台灣醫師專門職業及技術人員高等考試醫學一、醫學二核心高頻考點講義",
+  "scripts": {
+    "dev": "python -m mkdocs serve",
+    "build": "python -m mkdocs build"
+  },
+  "keywords": [
+    "taiwan",
+    "medical-licensing-exam",
+    "step1",
+    "notes",
+    "lecture-notes"
+  ],
+  "author": "",
+  "license": "MIT"
+}

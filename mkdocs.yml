@@ -1,0 +1,158 @@
+use_directory_urls: false
+site_name: 醫師國考一階段極致速讀講義
+site_description: 台灣考選部醫師專技高考醫學一、醫學二核心高頻考點手冊
+repo_url: ''
+
+theme:
+  name: material
+  language: zh-Hant
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: 切換至深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: 切換至淺色模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - 總覽與備考策略: index.md
+  - 跨學科高頻思維鏈:
+      - 跨科整合總覽: high-yield/index.md
+      - 1. 心血管系統整合: high-yield/cardiovascular.md
+      - 2. 呼吸系統整合: high-yield/respiratory.md
+      - 3. 腎臟與泌尿系統整合: high-yield/renal.md
+      - 4. 消化與肝膽胰整合: high-yield/gastrointestinal.md
+      - 5. 神經科學與中樞整合: high-yield/neuroscience.md
+      - 6. 內分泌與新陳代謝整合: high-yield/endocrine_metabolism.md
+      - 7. 感染免疫與化學治療整合: high-yield/antimicrobial_infectious.md
+      - 8. 血液腫瘤與精準醫學: high-yield/oncology_hematology.md
+  - 醫學（一）:
+      - 醫學（一）考綱與總覽: med1/index.md
+      - 人體與神經解剖學:
+          - "解剖學 第 01 章：背部與脊柱解剖": "med1/anatomy/解剖學_第01章_背部與脊柱解剖.md"
+          - "解剖學 第 02 章：上肢解剖學": "med1/anatomy/解剖學_第02章_上肢解剖學.md"
+          - "解剖學 第 03 章：下肢解剖學": "med1/anatomy/解剖學_第03章_下肢解剖學.md"
+          - "解剖學 第 04 章：胸部解剖學": "med1/anatomy/解剖學_第04章_胸部解剖學.md"
+          - "解剖學 第 05 章：腹部解剖學": "med1/anatomy/解剖學_第05章_腹部解剖學.md"
+          - "解剖學 第 06 章：骨盆與會陰解剖學": "med1/anatomy/解剖學_第06章_骨盆與會陰解剖學.md"
+          - "解剖學 第 07 章：頭頸部大體解剖學": "med1/anatomy/解剖學_第07章_頭頸部大體解剖學.md"
+          - "解剖學 第 08 章：眼與耳感覺器官解剖學": "med1/anatomy/解剖學_第08章_眼與耳感覺器官解剖學.md"
+          - "解剖學 第 09 章：脊髓神經解剖、傳導束與脊髓病變": "med1/anatomy/解剖學_第09章_脊髓神經解剖傳導束與脊髓病變.md"
+          - "解剖學 第 10 章：腦幹內部構造、小腦迴路與十二對腦神經": "med1/anatomy/解剖學_第10章_腦幹小腦與十二對腦神經.md"
+          - "解剖學 第 11 章：大腦皮質基底核腦血管與腦室": "med1/anatomy/解剖學_第11章_大腦皮質基底核腦血管與腦室.md"
+      - 組織學與胚胎學:
+          - "組織與胚胎學 第 01 章：上皮、結締、軟骨與骨骼組織": "med1/histology_embryology/組胚學_第01章_上皮結締軟骨與骨骼組織.md"
+          - "組織與胚胎學 第 02 章：血液、肌肉與循環淋巴組織": "med1/histology_embryology/組胚學_第02章_血液肌肉與循環淋巴組織.md"
+          - "組織與胚胎學 第 03 章：消化、呼吸、泌尿與生殖微細結構": "med1/histology_embryology/組胚學_第03章_消化呼吸泌尿與生殖微細結構.md"
+          - "組織與胚胎學 第 04 章：內分泌、神經與感覺組織學": "med1/histology_embryology/組胚學_第04章_內分泌神經與感覺組織學.md"
+          - "組織與胚胎學 第 05 章：早期胚胎發育、三胚層與胎盤": "med1/histology_embryology/組胚學_第05章_早期胚胎發育三胚層與胎盤.md"
+          - "組織與胚胎學 第 06 章：咽弓頭頸演化與器官系統發育": "med1/histology_embryology/組胚學_第06章_咽弓頭頸演化與器官系統發育.md"
+      - 人體生理學:
+          - "生理學 第01章 細胞生理、膜電位與肌肉收縮": "med1/physiology/生理學_第01章_細胞生理膜電位與肌肉收縮.md"
+          - "生理學 第02章 神經生理、突觸傳遞與感覺運動系統": "med1/physiology/生理學_第02章_神經生理突觸傳遞與感覺運動系統.md"
+          - "生理學 第03章 心血管電生理、心臟週期與血流動力學": "med1/physiology/生理學_第03章_心血管電生理心臟週期與血流動力學.md"
+          - "生理學 第04章 呼吸生理、肺通氣、氣體交換與化學調節": "med1/physiology/生理學_第04章_呼吸生理肺通氣氣體交換與化學調節.md"
+          - "生理學 第05章 腎臟生理、腎絲球過濾與管腔再吸收排泄": "med1/physiology/生理學_第05章_腎臟生理腎絲球過濾與管腔再吸收排泄.md"
+          - "生理學 第06章 酸鹼平衡與體液電解質調控": "med1/physiology/生理學_第06章_酸鹼平衡與體液電解質調控.md"
+          - "生理學 第07章 消化生理、消化道荷爾蒙分泌與蠕動": "med1/physiology/生理學_第07章_消化生理消化道荷爾蒙分泌與蠕動.md"
+          - "生理學 第08章 內分泌生理、下丘腦腦垂腺甲狀腺與腎上腺": "med1/physiology/生理學_第08章_內分泌生理下丘腦腦垂腺甲狀腺與腎上腺.md"
+          - "生理學 第09章 鈣磷代謝與胰島葡萄糖恆定": "med1/physiology/生理學_第09章_鈣磷代謝與胰島葡萄糖恆定.md"
+          - "生理學 第10章 生殖生理與特殊感覺神經生理": "med1/physiology/生理學_第10章_生殖生理與特殊感覺神經生理.md"
+      - 微生物學與免疫學:
+          - "微生物與免疫學 第01章 基礎免疫學：固有免疫、模式識別受體與補體系統": "med1/microbiology_immunology/微免_第01章_基礎免疫學固有免疫與抗原呈遞.md"
+          - "微生物與免疫學 第02章 基礎免疫學：體液與細胞適應性免疫、MHC與細胞激素": "med1/microbiology_immunology/微免_第02章_基礎免疫學體液與細胞適應性免疫.md"
+          - "微生物與免疫學 第03章 臨床免疫學：免疫耐受、自體免疫與先天免疫缺陷病": "med1/microbiology_immunology/微免_第03章_臨床免疫學免疫耐受自體免疫與免疫缺陷.md"
+          - "微生物與免疫學 第04章 細菌學總論與革蘭氏陽性球菌": "med1/microbiology_immunology/微免_第04章_細菌學總論與革蘭氏陽性球菌.md"
+          - "微生物與免疫學 第05章 革蘭氏陽性桿菌與厭氧菌": "med1/microbiology_immunology/微免_第05章_革蘭氏陽性桿菌與厭氧菌.md"
+          - "微生物與免疫學 第06章 革蘭氏陰性球菌與腸內桿菌科": "med1/microbiology_immunology/微免_第06章_革蘭氏陰性球菌與腸內桿菌.md"
+          - "微生物與免疫學 第07章 人畜共通小桿菌、螺桿菌與非典型菌群": "med1/microbiology_immunology/微免_第07章_人畜共通小桿菌與非典型菌群.md"
+          - "微生物與免疫學 第08章 分枝桿菌屬與醫用真菌學": "med1/microbiology_immunology/微免_第08章_分枝桿菌屬與醫用真菌學.md"
+          - "微生物與免疫學 第09章 醫用病毒學：DNA 病毒與肝炎病毒": "med1/microbiology_immunology/微免_第09章_醫用病毒學DNA病毒與肝炎病毒.md"
+          - "微生物與免疫學 第10章 醫用病毒學：RNA 病毒與反轉錄病毒": "med1/microbiology_immunology/微免_第10章_醫用病毒學RNA病毒與反轉錄病毒.md"
+      - 醫用寄生蟲學:
+          - "寄生蟲學 第01章 醫用原蟲學：阿米巴、鞭毛蟲與纖毛蟲": "med1/parasitology/寄生蟲學_第01章_醫用原蟲學阿米巴鞭毛蟲與纖毛蟲.md"
+          - "寄生蟲學 第02章 醫用原蟲學：血液與組織原蟲": "med1/parasitology/寄生蟲學_第02章_醫用原蟲學血液與組織原蟲.md"
+          - "寄生蟲學 第03章 醫用蠕蟲學：吸蟲綱與絛蟲綱": "med1/parasitology/寄生蟲學_第03章_醫用蠕蟲學吸蟲與絛蟲綱.md"
+          - "寄生蟲學 第04章 醫用蠕蟲學：線蟲綱與組織線蟲": "med1/parasitology/寄生蟲學_第04章_醫用蠕蟲學線蟲綱與組織線蟲.md"
+  - 醫學（二）:
+      - 醫學（二）考綱與總覽: med2/index.md
+      - 生物化學與分子生物學:
+          - "第 01 章：蛋白質化學與結構病理": "med2/biochemistry/第01章_蛋白質化學與結構病理.md"
+          - "第 02 章：酵素學、催化動力學與臨床酵素學": "med2/biochemistry/第02章_酵素學催化動力學與臨床酵素學.md"
+          - "第 03 章：醣類基礎代謝與檸檬酸循環": "med2/biochemistry/第03章_醣類基礎代謝與檸檬酸循環.md"
+          - "第 04 章：生物氧化、電子傳遞鏈與氧化壓力": "med2/biochemistry/第04章_生物氧化電子傳遞鏈與氧化壓力.md"
+          - "第 05 章：進階醣類代謝、肝醣調節與單醣異常": "med2/biochemistry/第05章_進階醣類代謝肝醣調節與單醣異常.md"
+          - "第 06 章：脂質分解、脂肪酸 $\beta$-氧化與酮體代謝": "med2/biochemistry/第06章_脂質分解脂肪酸氧化與酮體代謝.md"
+          - "第 07 章：脂質生合成、複合脂質與脂蛋白代謝": "med2/biochemistry/第07章_脂質生合成複合脂質與脂蛋白代謝.md"
+          - "第 08 章：含氮化合物、胺基酸分解與特化產物": "med2/biochemistry/第08章_含氮化合物胺基酸分解與特化產物.md"
+          - "第 09 章：核苷酸代謝、一碳循環與抗代謝藥物": "med2/biochemistry/第09章_核苷酸代謝一碳循環與抗代謝藥物.md"
+          - "第 10 章：分子生物學、基因資訊流與表觀遺傳": "med2/biochemistry/第10章_分子生物學基因資訊流與表觀遺傳.md"
+          - "第 11 章：荷爾蒙訊息傳遞、維生素與微量元素": "med2/biochemistry/第11章_荷爾蒙訊息傳遞維生素與微量元素.md"
+      - 基礎與臨床藥理學:
+          - "藥理學 第01章 自主神經藥理學：膽鹼能擬似與阻斷劑": "med2/pharmacology/藥理學_第01章_自主神經膽鹼能擬似與阻斷劑.md"
+          - "藥理學 第02章 自主神經藥理學：腎上腺素能促效與阻斷劑": "med2/pharmacology/藥理學_第02章_自主神經腎上腺素能促效與阻斷劑.md"
+          - "藥理學 第03章 心血管藥理學：抗高血壓、利尿劑與血管擴張劑": "med2/pharmacology/藥理學_第03章_心血管抗高血壓利尿劑與血管擴張劑.md"
+          - "藥理學 第04章 心血管藥理學：抗心律不整、抗心衰竭與降血脂藥": "med2/pharmacology/藥理學_第04章_抗心律不整抗心衰竭與降血脂藥.md"
+          - "藥理學 第05章 中樞神經藥理學：鎮靜安眠、抗癲癇與巴金森藥物": "med2/pharmacology/藥理學_第05章_中樞神經鎮靜安眠抗癲癇與巴金森藥物.md"
+          - "藥理學 第06章 中樞神經藥理學：抗憂鬱、抗精神病、止痛與麻醉藥": "med2/pharmacology/藥理學_第06章_中樞神經抗憂鬱抗精神病止痛與麻醉藥.md"
+          - "藥理學 第07章 抗生素藥理學：細胞壁與蛋白質合成抑制劑": "med2/pharmacology/藥理學_第07章_抗生素細胞壁與蛋白質合成抑制劑.md"
+          - "藥理學 第08章 抗生素藥理學：核酸抑制、抗結核、抗黴菌與抗病毒": "med2/pharmacology/藥理學_第08章_抗生素核酸抑制抗結核抗黴菌與抗病毒.md"
+          - "藥理學 第09章 抗腫瘤化療、標靶藥物與免疫調節抑制劑": "med2/pharmacology/藥理學_第09章_抗腫瘤化療標靶藥物與免疫調節抑制劑.md"
+          - "藥理學 第10章 內分泌藥理學：糖尿病、甲狀腺與皮質類固醇": "med2/pharmacology/藥理學_第10章_內分泌糖尿病甲狀腺與皮質類固醇.md"
+          - "藥理學 第11章 自泌素、呼吸、消化、抗痛風與抗發炎藥理學": "med2/pharmacology/藥理學_第11章_自泌素呼吸消化抗痛風與抗發炎藥.md"
+          - "藥理學 第12章 毒理學、臨床解毒劑與藥動藥效動力學": "med2/pharmacology/藥理學_第12章_毒理學解毒劑與藥動藥效動力學.md"
+      - 人體病理學:
+          - "病理學 第01章 細胞損傷、壞死、凋亡與細胞適應": "med2/pathology/病理學_第01章_細胞損傷壞死凋亡與細胞適應.md"
+          - "病理學 第02章 急性與慢性發炎、組織修復與肉芽腫": "med2/pathology/病理學_第02章_急性與慢性發炎組織修復與肉芽腫.md"
+          - "病理學 第03章 血液動力學障礙、血栓形成與休克": "med2/pathology/病理學_第03章_血液動力學障礙血栓形成與休克.md"
+          - "病理學 第04章 免疫病理學：自體免疫與過敏反應": "med2/pathology/病理學_第04章_免疫病理學自體免疫與過敏反應.md"
+          - "病理學 第05章 腫瘤病理學：分子機轉、命名與分期": "med2/pathology/病理學_第05章_腫瘤病理學分子機轉命名與分期.md"
+          - "病理學 第06章 心血管系統病理學：動脈粥狀硬化、心肌梗塞與心臟病": "med2/pathology/病理學_第06章_心血管病理學動脈粥狀硬化與心臟病.md"
+          - "病理學 第07章 呼吸系統病理學：肺炎、阻塞限制性肺疾患與肺癌": "med2/pathology/病理學_第07章_呼吸病理學肺炎阻塞限制肺疾患與肺癌.md"
+          - "病理學 第08章 消化系統病理學：胃腸、肝膽、胰臟腫瘤與發炎": "med2/pathology/病理學_第08章_消化病理學胃腸肝膽胰腫瘤與發炎.md"
+          - "病理學 第09章 腎臟與泌尿生殖病理學：腎絲球腎炎與腫瘤": "med2/pathology/病理學_第09章_腎臟泌尿病理學腎絲球腎炎與腫瘤.md"
+          - "病理學 第10章 女性生殖與乳房病理學：子宮、卵巢與乳癌": "med2/pathology/病理學_第10章_女性生殖與乳房病理學子宮卵巢與乳癌.md"
+          - "病理學 第11章 造血與淋巴系統病理學：白血病與淋巴瘤": "med2/pathology/病理學_第11章_造血淋巴病理學白血病與淋巴瘤.md"
+          - "病理學 第12章 內分泌、神經、骨骼肌肉病理學": "med2/pathology/病理學_第12章_內分泌神經骨骼肌肉病理學.md"
+      - 公共衛生學（含生統流病法規）:
+          - "公共衛生學 第01章 生物統計學：假設檢定與推論統計": "med2/public_health/公共衛生學_第01章_生物統計學假設檢定與推論統計.md"
+          - "公共衛生學 第02章 流行病學：研究設計、因果推論與偏差控制": "med2/public_health/公共衛生學_第02章_流行病學研究設計與因果推論.md"
+          - "公共衛生學 第03章 篩檢與診斷試驗評估、疾病監測與爆發調查": "med2/public_health/公共衛生學_第03章_篩檢診斷試驗評估與疾病監測.md"
+          - "公共衛生學 第04章 健康保險、醫療體系與衛生政策": "med2/public_health/公共衛生學_第04章_健康保險醫療體系與衛生政策.md"
+          - "公共衛生學 第05章 環境與職業醫學：毒理學、公害病與職業病": "med2/public_health/公共衛生學_第05章_環境與職業醫學毒理與職業病.md"
+          - "公共衛生學 第06章 衛生法規與生命醫療倫理學": "med2/public_health/公共衛生學_第06章_衛生法規與生命醫療倫理學.md"

@@ -1,0 +1,9 @@
+# Build artifacts
+site/
+__pycache__/
+*.py[cod]
+.cache/
+
+# Raw and bulky files
+raw_exam_pdfs/
+parsed_database/

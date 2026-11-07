@@ -1,0 +1,3 @@
+@echo off
+echo Building Static Site for Medical Licensing Exam Step 1 Lecture Notes...
+python -m mkdocs build
