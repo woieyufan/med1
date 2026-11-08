@@ -1,0 +1,256 @@
+/* ==========================================================================
+   台灣醫師國考一階段極致速讀講義 - 專屬排版與閱讀體驗優化 CSS
+   ========================================================================== */
+
+/* --- 1. 繁體中文全站字體流與行高優化 --- */
+:root {
+  --md-text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", 
+                  "Noto Sans TC", "Microsoft JhengHei", Roboto, sans-serif;
+  --md-code-font: "JetBrains Mono", Consolas, Menlo, Monaco, "Courier New", monospace;
+}
+
+body, .md-typeset {
+  font-family: var(--md-text-font);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  letter-spacing: 0.025em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- 2. 標題層次與視覺裝飾線 --- */
+.md-typeset h1 {
+  font-weight: 700;
+  margin-top: 1.8rem;
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--md-primary-fg-color);
+  letter-spacing: 0.03em;
+}
+
+.md-typeset h2 {
+  font-weight: 700;
+  margin-top: 2.4rem;
+  margin-bottom: 1.2rem;
+  padding-left: 0.8rem;
+  border-left: 4px solid var(--md-primary-fg-color);
+  letter-spacing: 0.02em;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+  margin-top: 1.8rem;
+  margin-bottom: 0.9rem;
+  color: var(--md-primary-fg-color);
+}
+
+.md-typeset h4 {
+  font-weight: 600;
+  margin-top: 1.4rem;
+  margin-bottom: 0.7rem;
+}
+
+/* --- 3. 段落與列表呼吸感優化（徹底消滅密積文字牆） --- */
+.md-typeset p {
+  margin-bottom: 1.25em;
+  text-align: justify;
+}
+
+.md-typeset ul, 
+.md-typeset ol {
+  margin-top: 0.6em;
+  margin-bottom: 1.4em;
+  padding-left: 1.6em;
+}
+
+.md-typeset li {
+  margin-bottom: 0.65em;
+  line-height: 1.85;
+}
+
+.md-typeset li > p {
+  margin-bottom: 0.5em;
+}
+
+/* 次級列表多層縮排層次感與垂直間距 */
+.md-typeset li > ul, 
+.md-typeset li > ol {
+  margin-top: 0.45em;
+  margin-bottom: 0.65em;
+  padding-left: 1.5em;
+}
+
+.md-typeset li > ul > li,
+.md-typeset li > ol > li {
+  margin-bottom: 0.45em;
+}
+
+/* 強調文字色彩與對比度 */
+.md-typeset strong {
+  font-weight: 700;
+  color: var(--md-default-fg-color--bold, #111827);
+}
+
+[data-md-color-scheme="slate"] .md-typeset strong {
+  color: #f9fafb;
+}
+
+/* --- 4. 表格現代化排版（消滅橫向壓迫感） --- */
+.md-typeset table:not([class]) {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  margin-top: 1.2em;
+  margin-bottom: 2em;
+  border: 1px solid var(--md-default-fg-color--lightest, #e5e7eb);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: middle;
+  border: none;
+  white-space: nowrap;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 12px 16px;
+  line-height: 1.75;
+  vertical-align: top;
+  border-top: 1px solid var(--md-default-fg-color--lightest, #f3f4f6);
+  border-right: 1px solid var(--md-default-fg-color--lightest, #f3f4f6);
+}
+
+.md-typeset table:not([class]) td:last-child {
+  border-right: none;
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.015);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background-color: rgba(0, 150, 136, 0.06);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:hover {
+  background-color: rgba(0, 150, 136, 0.14);
+}
+
+/* --- 5. 提示塊（Admonitions）與真題折疊卡（Details）現代化 --- */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-top: 1.4em;
+  margin-bottom: 1.8em;
+  padding: 0.6rem 1.2rem;
+  border-width: 1px 1px 1px 5px;
+}
+
+.md-typeset .admonition-title,
+.md-typeset summary {
+  font-weight: 700;
+  padding: 12px 18px;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+}
+
+.md-typeset details[open] summary {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  margin-bottom: 0.8rem;
+}
+
+/* 真題卡片專屬美化 */
+.md-typeset details.question {
+  border-color: #3f51b5;
+  background-color: rgba(63, 81, 181, 0.02);
+}
+
+.md-typeset details.question > summary {
+  background-color: rgba(63, 81, 181, 0.08);
+  color: #283593;
+}
+
+[data-md-color-scheme="slate"] .md-typeset details.question > summary {
+  background-color: rgba(63, 81, 181, 0.25);
+  color: #c5cae9;
+}
+
+/* --- 6. 專屬考點微章（Badges） --- */
+.badge-gold {
+  display: inline-block;
+  padding: 2px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: #fff8e1;
+  color: #b78103;
+  border: 1px solid #ffe082;
+  margin-right: 6px;
+}
+
+.badge-trap {
+  display: inline-block;
+  padding: 2px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+  margin-right: 6px;
+}
+
+.badge-key {
+  display: inline-block;
+  padding: 2px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: #e0f2f1;
+  color: #00695c;
+  border: 1px solid #b2dfdb;
+  margin-right: 6px;
+}
+
+[data-md-color-scheme="slate"] .badge-gold {
+  background-color: rgba(255, 193, 7, 0.15);
+  color: #ffd54f;
+  border-color: rgba(255, 193, 7, 0.3);
+}
+
+[data-md-color-scheme="slate"] .badge-trap {
+  background-color: rgba(244, 67, 54, 0.15);
+  color: #ef9a9a;
+  border-color: rgba(244, 67, 54, 0.3);
+}
+
+[data-md-color-scheme="slate"] .badge-key {
+  background-color: rgba(0, 150, 136, 0.15);
+  color: #80cbc4;
+  border-color: rgba(0, 150, 136, 0.3);
+}
+
+/* --- 7. 數值與公式排版優化 --- */
+.arithmatex {
+  padding: 0 4px;
+  color: inherit;
+}
+
+div.arithmatex {
+  margin: 1.4em 0;
+  text-align: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
